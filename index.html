@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Codificador</title>
+        <link rel="icon" type="image/x-icon" href="css/imagens/padlock.ico"/>
+        <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    </head>
+    
+    <body class="tamanho">
+        <h1>Codificador de Mensagens<br></h1>
+        <h3>Digite o que quiser, entretanto, removeremos acentos, letras maiúsculas e caracteres especiais.<br><br></h3>
+
+        <div class="alinha">
+            <textarea id="caixaCod" rows="10", cols="50" placeholder="digite o texto para codificar aqui" spellcheck="true" wrap="hard"></textarea>
+            <textarea id="caixaDecod" rows="10", cols="50" placeholder="digite o texto para descodificar aqui" spellcheck="false" wrap="hard"></textarea>
+        </div>
+
+        <div class="alinha-botao">
+            <button class="formatar-botao" id="botaoCod">Codificar</button>
+            <button class="formatar-botao" id="botaoCopiar">Copiar</button>
+            <button class="formatar-botao" id="botaoDecod">Decodificar</button>
+            <p><br></p>
+        </div>
+
+        <p id="msgInformativa"></p>
+
+        <div class="rodape">
+            <p class="nome-rodape">Fabio Amorim - Challenge Alura/Oracle - 01/2022</p>
+        </div>
+
+        <div class="redes">
+            <a target="blank" href="https://www.facebook.com/fabiodecaztro/"><img src="css/imagens/facebook.png"/></a>
+            <a target="blank" href="https://github.com/fabiodecaztro"><img src="css/imagens/github.png"/></a>
+            <a target="blank" href="https://twitter.com/fabio_de_castro"><img src="css/imagens/twitter.png"/></a>
+            <a target="blank" href="https://www.linkedin.com/in/fabio-amorim"><img src="css/imagens/linkedin.png"/></a>
+        </div>
+    
+        <script src="js/codificador.js" ></script>
+        <script src="js/decodificador.js" ></script>
+        <script src="js/copiar.js" ></script>
+    </body>
+</html>
