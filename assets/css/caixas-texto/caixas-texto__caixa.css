@@ -1,0 +1,9 @@
+.caixas-texto__caixa {
+    margin: 10px;
+    border: transparent;
+    resize: none;
+}
+
+.caixas-texto__caixa:hover {
+    border: 3px solid #008cff;
+}

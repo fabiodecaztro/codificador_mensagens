@@ -1,0 +1,6 @@
+.rodape__links {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    max-width: 500px;
+}

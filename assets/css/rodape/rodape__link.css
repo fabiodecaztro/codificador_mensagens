@@ -1,0 +1,9 @@
+.rodape__link {
+    filter: invert(50%);
+    margin: 10px 20px;
+    transition: filter .500s;
+}
+
+.rodape__link:hover {
+    filter: invert(100%);
+}
