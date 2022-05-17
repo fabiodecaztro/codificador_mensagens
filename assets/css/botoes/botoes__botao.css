@@ -16,3 +16,11 @@
 .botoes__botao:hover {
     border-color: #abff2e;
 }
+
+@media screen and (max-width: 426px) {
+    .botoes__botao {
+        font-size: 1.6em;
+        margin: 10px 10px;
+        width: auto;
+    }
+}

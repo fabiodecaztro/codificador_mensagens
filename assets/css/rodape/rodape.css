@@ -9,3 +9,10 @@
 .rodape p {
     color: #ffffff8a;
 }
+
+@media screen and (max-width: 768px) {
+    .rodape {
+        flex-direction: column;
+        margin: 20px 15px;
+    }
+}

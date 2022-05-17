@@ -7,3 +7,10 @@
 .rodape__link:hover {
     filter: invert(100%);
 }
+
+@media screen and (max-width: 426px) {
+    .rodape__link {
+        margin: 0;
+        width: 50px;
+    }
+}

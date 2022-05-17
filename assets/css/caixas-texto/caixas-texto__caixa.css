@@ -7,3 +7,10 @@
 .caixas-texto__caixa:hover {
     border: 3px solid #008cff;
 }
+
+@media screen and (max-width: 768px) {
+    .caixas-texto__caixa {
+        font-size: 1.3em;
+        width: 300px;
+    }
+}

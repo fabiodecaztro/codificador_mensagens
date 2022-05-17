@@ -4,3 +4,9 @@
     justify-content: center;
     margin: 10px 0;
 }
+
+@media screen and (max-width: 426px) {
+    .botoes {
+        flex-direction: column;
+    }
+}
