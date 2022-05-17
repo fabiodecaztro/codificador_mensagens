@@ -6,7 +6,7 @@
     justify-content: space-between;
 }
 
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 500px) {
     .caixas-texto {
         align-items: center;
         flex-direction: column;
