@@ -1,23 +1,29 @@
-var caixaCod = document.querySelector("#caixaCod");
-var botaoCod = document.querySelector("#botaoCod");
-var mensagem = document.querySelector('#mensagemInformativa');
+let caixaCodificador = document.querySelector(".caixa_codificador-js");
+let botaoCodificador = document.querySelector('.botao-codificar-js');
 
-botaoCod.addEventListener('click', function () {
-    if (caixaCod.value == '') {
-        mensagem.textContent = 'Digite a mensagem para codificação!';
-        mensagem.style.color = 'red';
-        setTimeout(function () {
-            mensagem.textContent = '';
-            mensagem.style.color = '#adff2f';
-        }, 5000);
+botaoCodificador.addEventListener('click', function () {
+    if (caixaCodificador.value == '') {
+        criaMensagem(
+            'Digite a mensagem para codificação!',
+            '#c30000'
+        )
     } else {
-        var mensagemMinuscula = caixaCod.value.toLowerCase();
-        var mensagemSemAcento = mensagemMinuscula.normalize('NFD').replace(/([\u0300-\u036f]|[^0-9a-zA-Z ])/g, '');
-        var arreyMensagem = mensagemSemAcento.split('');
-        var retorno = codifica(arreyMensagem);
-
+        // Transformar em minuscula
+        let mensagemMinuscula = caixaCodificador.value.toLowerCase();
+        // Usar um RegEx para eliminar caracteres indesejados
+        let mensagemSemAcento = mensagemMinuscula.normalize('NFD').replace(/([\u0300-\u036f]|[^0-9a-zA-Z ])/g, '');
+        // Separar as letras em uma lista
+        let arreyMensagem = mensagemSemAcento.split('');
+        // Enviar para a função e retornar codificado
+        let retorno = codifica(arreyMensagem);
+        // Enviar para a função que exibirá no decodificador
         recebeCodificado(retorno);
-        document.getElementById('caixaCod').value = '';
+        criaMensagem(
+            'Mensagem codificada',
+            '#adff2f'
+        )
+        caixaCodificador.value = ''
+        caixaDecodificador.focus()
     }
 })
 
@@ -42,8 +48,22 @@ function codifica(mensagem) {
     return mensagem.join('');
 }
 
-function recebeDecodificado(mensagemDecodificada) {
-    document.getElementById('caixaCod').value = mensagemDecodificada;
+function criaMensagem(mensagem, cor) {
+    // Limpa
+    mensagens.innerHTML = ''
+    // Cria o elemento/filho
+    let novaMensagem = document.createElement('p')
+    // Cria a mensaegem
+    let conteudo = document.createTextNode(mensagem);
+    // Adiciona a mensagem no filho
+    novaMensagem.appendChild(conteudo)
+    // Adiciona o filho no pai
+    mensagens.appendChild(novaMensagem)
+    // Adiciona cor de acordo com o parametro
+    mensagens.style.color = cor
 }
-console.log("Banco de imagens - icons8.com.br<br>")
-console.log("Orientações - Curso em vídeo / MDM Web Docs")
+
+// Pega o codigo reexibe convertido na area
+function recebeDecodificado(mensagemDecodificada) {
+    caixaCodificador.value = mensagemDecodificada;
+}

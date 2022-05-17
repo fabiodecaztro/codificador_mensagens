@@ -2,6 +2,7 @@
     margin: 10px;
     border: transparent;
     resize: none;
+    border-radius: 5px;
 }
 
 .caixas-texto__caixa:hover {

@@ -1,6 +1,6 @@
-const botaoCopiar = document.querySelector('.botao-copiar');
-let caixaDecodificador = document.querySelector('.caixa-decodificador');
-let mensagens = document.querySelector('.mensagens');
+const botaoCopiar = document.querySelector('.botao-copiar-js');
+let caixaDecodificador = document.querySelector('.caixa-decodificador-js');
+let mensagens = document.querySelector('.mensagens-js');
 
 // Ao CredentialsContainer, copia os dados da mensagem codificada para area de transferencia e imprime uma mensagem de erro/sucesso
 botaoCopiar.addEventListener('click', function () {
@@ -9,9 +9,9 @@ botaoCopiar.addEventListener('click', function () {
 		// Chama a função criadora da mensagem para erro
 		criaMensagem(
 			'Nenhuma mensagem para ser copiada - Digite algo!',
-			'red'
+			'#c30000'
 		)
-	// Chama a função criadora da mensagem para sucesso
+		// Chama a função criadora da mensagem para sucesso
 	} else {
 		criaMensagem(
 			'Mensagem copiada para a área de transferência',

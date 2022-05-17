@@ -1,21 +1,24 @@
-var caixaDecod = document.querySelector('#caixaDecod');
-var botaoDecod = document.querySelector('#botaoDecod');
+let botaoDecodificador = document.querySelector('.botao_decodificador-js');
 
-botaoDecod.addEventListener('click', function () {
+botaoDecodificador.addEventListener('click', function () {
+    // Apos o clique, pega o visualViewport, pois a variavel ja foi chamada em 'copia-mensagem.js'
+    caixaDecodificador = document.querySelector('.caixa-decodificador-js');
     if (caixaDecodificador.value == '') {
-        mensagem.textContent = 'Digite a mensagem para decodificação!';
-        mensagem.style.color = 'red';
-        setTimeout(function () {
-            mensagem.textContent = '';
-            mensagem.style.color = '#adff2f';
-        }, 5000);
+        criaMensagem(
+            'Digite a mensagem para decodificação!',
+            '#c30000'
+        )
     } else {
-        var mensagemMinuscula = caixaDecodificador.value.toLowerCase();
-        var mensagemSemAcento = mensagemMinuscula.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-        var arreyMensagem = mensagemSemAcento.split('');
-        var retorno = decodifica(mensagemSemAcento);
+        let mensagemMinuscula = caixaDecodificador.value.toLowerCase();
+        let mensagemSemAcento = mensagemMinuscula.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+        let retorno = decodifica(mensagemSemAcento);
         recebeDecodificado(retorno);
-        document.getElementById('caixaDecod').value = '';
+        criaMensagem(
+            'Mensagem decodificada',
+            '#adff2f'
+        )
+        caixaDecodificador.value = '';
+        caixaCodificador.focus()
     }
 })
 
@@ -39,5 +42,20 @@ function decodifica(mensagem) {
 }
 
 function recebeCodificado(mensagemCodificada) {
-    document.getElementById('caixaDecod').value = mensagemCodificada;
+    caixaDecodificador.value = mensagemCodificada;
+}
+
+function criaMensagem(mensagem, cor) {
+    // Limpa
+    mensagens.innerHTML = ''
+    // Cria o elemento/filho
+    let novaMensagem = document.createElement('p')
+    // Cria a mensaegem
+    let conteudo = document.createTextNode(mensagem);
+    // Adiciona a mensagem no filho
+    novaMensagem.appendChild(conteudo)
+    // Adiciona o filho no pai
+    mensagens.appendChild(novaMensagem)
+    // Adiciona cor de acordo com o parametro
+    mensagens.style.color = cor
 }

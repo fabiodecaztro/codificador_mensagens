@@ -9,12 +9,14 @@
     font-size: 1.3em;
     font-weight: bold;
     margin: 0 10px;
-    transition: border-color .500s;
+    /* transition: border-color .500s; */
     width: 200px;
 }
 
 .botoes__botao:hover {
-    border-color: #abff2e;
+    border-color: #008cff;
+    color: #007ade;
+    font-size: 1.2em;
 }
 
 @media screen and (max-width: 500px) {

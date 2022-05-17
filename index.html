@@ -4,75 +4,69 @@
 
 <head>
     <meta charset="utf-8" name="viewport" content="width=device-width">
+
     <title>Codificador</title>
     <link rel="icon" type="image/x-icon" href="./assets/image/padlock.ico">
-    
-	<link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
+
+    <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/cabecalho.css">
-	<link rel="stylesheet" type="text/css" href="./assets/css/mensagens.css">
-	<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
-    
-	<link rel="stylesheet" type="text/css" href="./assets/css/botoes/botoes.css">
-	<link rel="stylesheet" type="text/css" href="./assets/css/botoes/botoes__botao.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/mensagens.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+
+    <link rel="stylesheet" type="text/css" href="./assets/css/botoes/botoes.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/botoes/botoes__botao.css">
 
     <link rel="stylesheet" type="text/css" href="./assets/css/caixas-texto/caixas-texto__caixa.css">
-	<link rel="stylesheet" type="text/css" href="./assets/css/caixas-texto/caixas-texto.css">
-    
-	<link rel="stylesheet" type="text/css" href="./assets/css/rodape/rodape__link.css">
-	<link rel="stylesheet" type="text/css" href="./assets/css/rodape/rodape__links.css">
-	<link rel="stylesheet" type="text/css" href="./assets/css/rodape/rodape.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/caixas-texto/caixas-texto.css">
+
+    <link rel="stylesheet" type="text/css" href="./assets/css/rodape/rodape__link.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/rodape/rodape__links.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/rodape/rodape.css">
 </head>
 
-<body class="@tamanho">
+<body>
     <header class="cabecalho">
         <h1>Codificador de Mensagens</h1>
         <h2>Digite o que quiser, entretanto, removeremos acentos, letras maiúsculas e caracteres especiais.</h2>
     </header>
 
-
-<!-- <span style="font-size: 5em;color:red;">EM MANUTENÇÃO</span> -->
-
-
     <main>
-        <section class="mensagens">
+        <section class="mensagens mensagens-js">
             <!-- entrada de mensagem pelo js -->
-            <!-- <p>Mensagem copiada para a area de transferencia</p> -->
         </section>
         <section class="caixas-texto">
-            <textarea class="caixas-texto__caixa caixa_codificador" id="caixaCod" rows="10", cols="50" placeholder="digite o texto para codificar aqui" spellcheck="true" wrap="hard"></textarea>
+            <textarea class="caixas-texto__caixa caixa_codificador-js" rows="10" , cols="50"
+                placeholder="digite o texto para codificar aqui" spellcheck="true" wrap="hard"></textarea>
 
-            <textarea class="caixas-texto__caixa caixa-decodificador" id="caixaDecod" rows="10" , cols="50" placeholder="digite o texto para descodificar aqui" spellcheck="false" wrap="hard"></textarea>
+            <textarea class="caixas-texto__caixa caixa-decodificador-js" rows="10" , cols="50"
+                placeholder="digite o texto para descodificar aqui" spellcheck="false" wrap="hard"></textarea>
         </section>
-        <!-- <div class="alinha"> -->
+
         <section class="botoes">
-        <!-- <div class="alinha-botao"> -->
-            <button class="botoes__botao formatar-botao" id="botaoCod">Codificar</button>
-            <button class="botoes__botao botao-copiar" id="botaoCopiar">Copiar</button>
-            <button class="botoes__botao formatar-botao" id="botaoDecod">Decodificar</button>
-            <p><br></p>
-        <!-- </div> -->
+            <button class="botoes__botao botao-codificar-js">Codificar</button>
+            <button class="botoes__botao botao-copiar-js" title="Será copiado mensagens que estiverem no campo direito">Copiar</button>
+            <button class="botoes__botao botao_decodificador-js">Decodificar</button>
         </section>
-    
-        <!-- <p id="msgInformativa"></p> -->
-    
     </main>
 
     <footer class="rodape">
-        <!-- <div class="rodape"> -->
         <p>
             Desenvolvido por Fabio Amorim - Challenge Alura/Oracle
             <br>
             janeiro de 2022
         </p>
-    
+
         <section class="rodape__links">
-            <a class="rodape__link" target="blank" href="https://www.facebook.com/fabiodecaztro/"><img src="./assets/image/facebook.png" /></a>
-            <a class="rodape__link" target="blank" href="https://github.com/fabiodecaztro"><img src="./assets/image/github.png" /></a>
-            <a class="rodape__link" target="blank" href="https://twitter.com/fabio_de_castro"><img src="./assets/image/twitter.png" /></a>
-            <a class="rodape__link" target="blank" href="https://www.linkedin.com/in/fabio-amorim"><img src="./assets/image/linkedin.png" /></a>
+            <a class="rodape__link" target="blank" href="https://www.facebook.com/fabiodecaztro/"><img
+                    src="./assets/image/facebook.png" /></a>
+            <a class="rodape__link" target="blank" href="https://github.com/fabiodecaztro"><img
+                    src="./assets/image/github.png" /></a>
+            <a class="rodape__link" target="blank" href="https://twitter.com/fabio_de_castro"><img
+                    src="./assets/image/twitter.png" /></a>
+            <a class="rodape__link" target="blank" href="https://www.linkedin.com/in/fabio-amorim"><img
+                    src="./assets/image/linkedin.png" /></a>
         </section>
     </footer>
-
 
     <script src="js/codificador.js"></script>
     <script src="js/decodificador.js"></script>
