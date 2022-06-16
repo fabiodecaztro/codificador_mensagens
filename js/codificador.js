@@ -1,5 +1,5 @@
-let caixaCodificador = document.querySelector(".caixa_codificador-js");
-let botaoCodificador = document.querySelector('.botao-codificar-js');
+let caixaCodificador = document.querySelector('[data-caixa-codificador]');
+let botaoCodificador = document.querySelector('[data-botao-codificador]');
 
 botaoCodificador.addEventListener('click', function () {
     if (caixaCodificador.value == '') {

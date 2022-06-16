@@ -31,19 +31,19 @@
     </header>
 
     <main>
-        <section class="mensagens mensagens-js">
+        <section class="mensagens mensagens-js" data-mensagens>
             <!-- entrada de mensagem pelo js -->
         </section>
         <section class="caixas-texto">
-            <textarea class="caixas-texto__caixa caixa_codificador-js" rows="10" , cols="50"
+            <textarea class="caixas-texto__caixa" data-caixa-codificador rows="10" cols="50"
                 placeholder="digite o texto para codificar aqui" spellcheck="true" wrap="hard"></textarea>
 
-            <textarea class="caixas-texto__caixa caixa-decodificador-js" rows="10" , cols="50"
+            <textarea class="caixas-texto__caixa caixa-decodificador-js" rows="10" cols="50"
                 placeholder="digite o texto para decodificar aqui" spellcheck="false" wrap="hard"></textarea>
         </section>
 
         <section class="botoes">
-            <button class="botoes__botao botao-codificar-js">Codificar</button>
+            <button class="botoes__botao" data-botao-codificador>Codificar</button>
             <button class="botoes__botao botao-copiar-js"
                 title="Será copiado mensagens que estiverem no campo direito">Copiar</button>
             <button class="botoes__botao botao_decodificador-js">Decodificar</button>
