@@ -1,6 +1,6 @@
 .caixas-texto {
     display: flex;
-    margin: 10px;
+    /* margin: 10px; */
     max-width: 1000px;
     height: 160px;
     justify-content: space-between;

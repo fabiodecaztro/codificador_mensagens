@@ -3,3 +3,9 @@
         font-size: 1.5em;
         text-align: center;
     }
+
+    @media screen and (max-width: 500px) {
+        .mensagens {
+            width: 300px;
+        }
+    }

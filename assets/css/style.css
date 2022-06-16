@@ -7,7 +7,6 @@ body {
     font-family: Helvetica, sans-serif;
     height: 100vh;
     justify-content: space-between;
-
 }
 
 h1 {
@@ -33,6 +32,7 @@ h2 {
     }
 
     main {
+        align-items: center;
         display: flex;
         flex-direction: column;
         height: 400px;
