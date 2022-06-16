@@ -1,8 +1,8 @@
-let botaoDecodificador = document.querySelector('.botao_decodificador-js');
+let botaoDecodificador = document.querySelector('[data-botao-decodificador]');
 
 botaoDecodificador.addEventListener('click', function () {
     // Apos o clique, pega o visualViewport, pois a variavel ja foi chamada em 'copia-mensagem.js'
-    caixaDecodificador = document.querySelector('.caixa-decodificador-js');
+    const caixaDecodificador = document.querySelector('[data-caixa-decodificador]');
     if (caixaDecodificador.value == '') {
         criaMensagem(
             'Digite a mensagem para decodificação!',
