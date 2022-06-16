@@ -1,17 +1,21 @@
 .caixas-texto__caixa {
-    margin: 10px;
     border: transparent;
-    resize: none;
-    border-radius: 5px;
-}
-
-.caixas-texto__caixa:hover {
     border: 3px solid #008cff;
+    border-radius: 5px;
+    margin: 10px;
+    resize: none;
 }
 
 @media screen and (max-width: 768px) {
     .caixas-texto__caixa {
         font-size: 1.3em;
-        width: 300px;
+        width: 330px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .caixas-texto__caixa {
+        font-size: 1.3em;
+        width: 280px;
     }
 }
